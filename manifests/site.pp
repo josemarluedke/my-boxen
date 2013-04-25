@@ -62,15 +62,44 @@ node default {
   }
 
   # node versions
-  include nodejs::0-4
-  include nodejs::0-6
   include nodejs::0-8
 
   # default ruby versions
-  include ruby::1_8_7
-  include ruby::1_9_2
   include ruby::1_9_3
   include ruby::2_0_0
+
+  # custom modules
+  include ctags
+  include heroku
+  include memcached
+  include redis
+  include postgresapp
+  include imagemagick
+  include iterm2::dev
+  include tmux
+  include xquartz
+  include wget
+  include sublime_text_2
+  include macvim
+  include mou
+  include github_for_mac
+  include caffeine
+  include googledrive
+  include pivotalbooster
+  include vlc
+  include textual
+  include alfred
+  include clipmenu
+  include appcleaner
+  include secondbar
+  include keyremap4macbook
+  include transmit
+  include skype
+  include chrome
+  include onepassword
+  include firefox
+  include rdio
+
 
   # common, useful packages
   package {
@@ -81,7 +110,7 @@ node default {
     ]:
   }
 
-  file { "${boxen::config::srcdir}/our-boxen":
+  file { "${boxen::config::srcdir}/my-boxen":
     ensure => link,
     target => $boxen::config::repodir
   }
