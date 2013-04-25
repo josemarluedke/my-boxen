@@ -74,7 +74,6 @@ node default {
   include memcached
   include redis
   include postgresapp
-  include imagemagick
   include iterm2::dev
   include tmux
   include xquartz
@@ -92,7 +91,7 @@ node default {
   include clipmenu
   include appcleaner
   include secondbar
-  include keyremap4macbook
+  include pckeyboardhack
   include transmit
   include skype
   include chrome

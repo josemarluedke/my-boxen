@@ -79,19 +79,9 @@ GITHUBTARBALL
     hub (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-imagemagick
-  specs:
-    imagemagick (1.2.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-iterm2
   specs:
     iterm2 (1.0.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-keyremap4macbook
-  specs:
-    keyremap4macbook (1.0.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-macvim
@@ -209,6 +199,11 @@ GITHUBTARBALL
     inifile (0.9.0)
 
 GITHUBTARBALL
+  remote: josemarluedke/puppet-pckeyboardhack
+  specs:
+    pckeyboardhack (1.0.2)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-stdlib
   specs:
     stdlib (3.0.0)
@@ -230,10 +225,8 @@ DEPENDENCIES
   heroku (= 2.0.0)
   homebrew (= 1.1.2)
   hub (= 1.0.0)
-  imagemagick (= 1.2.0)
   inifile (= 0.9.0)
   iterm2 (= 1.0.0)
-  keyremap4macbook (= 1.0.2)
   macvim (= 1.0.0)
   memcached (= 1.2.0)
   mou (= 1.0.0)
@@ -241,6 +234,7 @@ DEPENDENCIES
   nodejs (= 1.0.0)
   nvm (= 1.0.0)
   onepassword (= 1.0.0)
+  pckeyboardhack (= 1.0.2)
   pivotalbooster (= 1.0.3)
   postgresapp (= 1.0.0)
   rdio (= 1.0.0)
