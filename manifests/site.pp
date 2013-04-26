@@ -74,8 +74,10 @@ node default {
   include memcached
   include redis
   include postgresapp
+  include phantomjs
   include iterm2::dev
   include tmux
+  include gitx
   include xquartz
   include wget
   include sublime_text_2
@@ -84,7 +86,6 @@ node default {
   include github_for_mac
   include caffeine
   include googledrive
-  include pivotalbooster
   include vlc
   include textual
   include alfred
@@ -98,7 +99,14 @@ node default {
   include onepassword
   include firefox
   include rdio
+  include java
 
+  # OSx
+  include osx::global::expand_print_dialog
+  include osx::global::disable_key_press_and_hold
+  include osx::global::enable_keyboard_control_access
+  include osx::global::expand_print_dialog
+  include osx::global::expand_save_dialog
 
   # common, useful packages
   package {

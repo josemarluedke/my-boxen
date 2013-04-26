@@ -59,6 +59,11 @@ GITHUBTARBALL
     github_for_mac (1.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-gitx
+  specs:
+    gitx (1.2.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-googledrive
   specs:
     googledrive (1.0.2)
@@ -82,6 +87,11 @@ GITHUBTARBALL
   remote: boxen/puppet-iterm2
   specs:
     iterm2 (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-java
+  specs:
+    java (1.1.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-macvim
@@ -119,9 +129,14 @@ GITHUBTARBALL
     onepassword (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-pivotalbooster
+  remote: boxen/puppet-osx
   specs:
-    pivotalbooster (1.0.3)
+    osx (1.1.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-phantomjs
+  specs:
+    phantomjs (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-postgresapp
@@ -221,12 +236,14 @@ DEPENDENCIES
   gcc (= 1.0.0)
   git (= 1.0.0)
   github_for_mac (= 1.0.1)
+  gitx (= 1.2.0)
   googledrive (= 1.0.2)
   heroku (= 2.0.0)
   homebrew (= 1.1.2)
   hub (= 1.0.0)
   inifile (= 0.9.0)
   iterm2 (= 1.0.0)
+  java (= 1.1.0)
   macvim (= 1.0.0)
   memcached (= 1.2.0)
   mou (= 1.0.0)
@@ -234,8 +251,9 @@ DEPENDENCIES
   nodejs (= 1.0.0)
   nvm (= 1.0.0)
   onepassword (= 1.0.0)
+  osx (= 1.1.0)
   pckeyboardhack (= 1.0.2)
-  pivotalbooster (= 1.0.3)
+  phantomjs (= 1.0.0)
   postgresapp (= 1.0.0)
   rdio (= 1.0.0)
   redis (= 1.0.0)
