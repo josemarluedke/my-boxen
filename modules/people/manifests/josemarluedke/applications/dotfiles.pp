@@ -48,11 +48,4 @@ class people::josemarluedke::applications::dotfiles {
     target => "${$dotfiles_dir}/dotfiles/pryrc",
     require => Repository[$dotfiles_dir]
   }
-
-  exec { "add boxen to bash_profile":
-    cwd      => $dotfiles_dir,
-    command  => "echo '[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh' >> ${$dotfiles_dir}/dotfiles/bash_profile",
-    provider => shell,
-    require  => Repository[$dotfiles_dir]
-  }
 }
