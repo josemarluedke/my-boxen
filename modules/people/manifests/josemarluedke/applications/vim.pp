@@ -1,4 +1,4 @@
-class people::josemarluedke::vim {
+class people::josemarluedke::applications::vim {
   $home     = "/Users/${::luser}"
 
   if !file_exists("$home/.vim/install.sh") {
