@@ -1,5 +1,5 @@
 class people::josemarluedke::applications::dotfiles {
-  $home     = "/Users/${::luser}"
+  $home = "/Users/${::luser}"
 
   $dotfiles_dir = "${$home}/.dotfiles"
 
