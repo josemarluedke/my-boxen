@@ -1,4 +1,9 @@
 class people::josemarluedke {
+  # Pugins
+  heroku::plugin { 'accounts':
+    source => 'ddollar/heroku-accounts'
+  }
+
   # Packages
   include people::josemarluedke::packages::the_silver_searcher
 
