@@ -43,51 +43,24 @@ How do you do it?
 1. Go to the Downloads tab.
 1. Install the Command Line Tools.
 
-### Bootstrapping
 
-Create a **new** git repository somewhere.
-It can be private or public -- it really doesn't matter.
-If you're making a repository on GitHub, you _may not_ want to fork this repo
-to get started.
-The reason for that is that you can't really make private forks of public
-repositories easily.
+### Instalation
 
-Once you've done that, you can run the following to get bootstrap
-your boxen:
-
-```
-sudo mkdir -p /opt/boxen
-sudo chown ${USER}:admin /opt/boxen
-git clone https://github.com/boxen/our-boxen /opt/boxen/repo
-cd /opt/boxen/repo
-git remote rm origin
-git remote add origin <the location of my new git repository>
-git push -u origin master
-```
-
-### Distributing
-
-That's enough to get your boxen into a usable state on other machines,
+That's enough to get your boxen into a usable state on your machine,
 usually.
-From there, we recommend setting up
-[boxen-web](https://github.com/boxen/boxen-web)
-as an easy way to automate letting other folks install your boxen.
-
-If you _don't_ want to use boxen-web, folks can get using your boxen like so:
 
 ```
 sudo mkdir -p /opt/boxen
 sudo chown ${USER}:admin /opt/boxen
-git clone <location of my new git repository> /opt/boxen/repo
+git clone https://github.com/josemarluedke/my-boxen.git /opt/boxen/repo
 cd /opt/boxen/repo
 script/boxen
 ```
 
 It should run successfully, and should tell you to source a shell script
 in your environment.
-For users without a bash or zsh config or a `~/.profile` file,
-Boxen will create a shim for you that will work correctly.
-If you do have a `~/.bashrc` or `~/.zshrc`, your shell will not use
+
+If you do have a `~/.bashrc`, `~/.bash_profile` or `~/.zshrc`, your shell will not use
 `~/.profile` so you'll need to add a line like so at _the end of your config_:
 
 ``` sh
