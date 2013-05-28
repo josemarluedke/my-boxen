@@ -124,11 +124,6 @@ GITHUBTARBALL
     onepassword (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-osx
-  specs:
-    osx (1.1.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-phantomjs
   specs:
     phantomjs (1.0.0)
@@ -255,7 +250,6 @@ DEPENDENCIES
   nginx (= 1.4.0)
   nodejs (= 2.2.0)
   onepassword (= 1.0.0)
-  osx (= 1.1.0)
   pckeyboardhack (= 1.0.2)
   phantomjs (= 1.0.0)
   postgresapp (= 1.0.0)

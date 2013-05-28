@@ -100,13 +100,6 @@ node default {
   include rdio
   include java
 
-  # OSx
-  include osx::global::expand_print_dialog
-  include osx::global::disable_key_press_and_hold
-  include osx::global::enable_keyboard_control_access
-  include osx::global::expand_print_dialog
-  include osx::global::expand_save_dialog
-
   # common, useful packages
   package {
     [
