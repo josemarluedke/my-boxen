@@ -74,6 +74,7 @@ node default {
   include redis
   include postgresapp
   include phantomjs
+  include imagemagick
   include iterm2::dev
   include tmux
   include gitx
@@ -85,12 +86,13 @@ node default {
   include github_for_mac
   include caffeine
   include googledrive
+  include virtualbox
+  include vagrant
   include vlc
   include textual
   include alfred
   include clipmenu
   include appcleaner
-  include secondbar
   include pckeyboardhack
   include transmit
   include skype
@@ -114,3 +116,4 @@ node default {
     target => $boxen::config::repodir
   }
 }
+
