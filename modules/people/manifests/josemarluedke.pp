@@ -4,6 +4,10 @@ class people::josemarluedke {
     source => 'ddollar/heroku-accounts'
   }
 
+  # Configurations
+  class { 'nodejs::global': version => 'v0.10.0' }
+  class { 'phantomjs::global': version => '1.9.0' }
+
   # Packages
   include people::josemarluedke::packages::the_silver_searcher
 
