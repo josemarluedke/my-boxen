@@ -76,7 +76,7 @@ node default {
   include memcached
   include redis
   include postgresapp
-  include phantomjs
+  include phantomjs::1_9_0
   include imagemagick
   include iterm2::dev
   include tmux
