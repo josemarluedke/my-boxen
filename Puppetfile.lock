@@ -9,9 +9,14 @@ GITHUBTARBALL
     appcleaner (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-autoconf
+  specs:
+    autoconf (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
-    boxen (2.3.2)
+    boxen (2.3.6)
 
 GITHUBTARBALL
   remote: boxen/puppet-caffeine
@@ -46,7 +51,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-gcc
   specs:
-    gcc (1.0.0)
+    gcc (2.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-git
@@ -76,7 +81,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
-    homebrew (1.1.2)
+    homebrew (1.2.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-hub
@@ -121,12 +126,17 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
-    nodejs (3.2.3)
+    nodejs (3.2.7)
 
 GITHUBTARBALL
   remote: boxen/puppet-onepassword
   specs:
     onepassword (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-openssl
+  specs:
+    openssl (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-phantomjs
@@ -156,7 +166,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (6.0.0)
+    ruby (6.1.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-skype
@@ -214,7 +224,7 @@ GITHUBTARBALL
     xquartz (1.1.0)
 
 GITHUBTARBALL
-  remote: cprice-puppet/puppetlabs-inifile
+  remote: cprice404/puppetlabs-inifile
   specs:
     inifile (0.9.0)
 
@@ -231,20 +241,21 @@ GITHUBTARBALL
 DEPENDENCIES
   alfred (= 1.0.2)
   appcleaner (= 1.0.0)
-  boxen (= 2.3.2)
+  autoconf (= 1.0.0)
+  boxen (= 2.3.6)
   caffeine (= 1.0.0)
   chrome (= 1.1.0)
   clipmenu (= 1.0.0)
   ctags (= 1.0.0)
   dnsmasq (= 1.0.0)
   firefox (= 1.0.6)
-  gcc (= 1.0.0)
+  gcc (= 2.0.1)
   git (= 1.2.4)
   github_for_mac (= 1.0.1)
   gitx (= 1.2.0)
   googledrive (= 1.0.2)
   heroku (= 2.0.0)
-  homebrew (= 1.1.2)
+  homebrew (= 1.2.0)
   hub (= 1.0.0)
   imagemagick (= 1.2.0)
   inifile (= 0.9.0)
@@ -254,15 +265,16 @@ DEPENDENCIES
   memcached (= 1.2.0)
   mou (= 1.0.0)
   nginx (= 1.4.2)
-  nodejs (= 3.2.3)
+  nodejs (= 3.2.7)
   onepassword (= 1.0.0)
+  openssl (= 1.0.0)
   pckeyboardhack (= 1.0.2)
   phantomjs (= 2.0.2)
   postgresapp (= 1.0.0)
   rdio (= 1.0.0)
   redis (= 1.0.0)
   repository (= 2.2.0)
-  ruby (= 6.0.0)
+  ruby (= 6.1.1)
   skype (= 1.0.2)
   stdlib (= 4.1.0)
   sublime_text_2 (= 1.1.0)

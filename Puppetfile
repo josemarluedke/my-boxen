@@ -13,28 +13,30 @@ end
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
-github "boxen", "2.3.2"
+github "boxen", "2.3.6"
 
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
 
-github "dnsmasq",          "1.0.0"
-github "gcc",              "1.0.0"
-github "git",              "1.2.4"
-github "homebrew",         "1.1.2"
-github "hub",              "1.0.0"
-github "inifile",          "0.9.0", :repo => "cprice-puppet/puppetlabs-inifile"
-github "nginx",            "1.4.2"
-github "nodejs",           "3.2.3"
-github "repository",       "2.2.0"
-github "ruby",             "6.0.0"
-github "stdlib",           "4.1.0", :repo => "puppetlabs/puppetlabs-stdlib"
-github "sudo",             "1.0.0"
+github "autoconf",   "1.0.0"
+github "dnsmasq",    "1.0.0"
+github "gcc",        "2.0.1"
+github "git",        "1.2.4"
+github "homebrew",   "1.2.0"
+github "hub",        "1.0.0"
+github "inifile",    "0.9.0", :repo => "cprice404/puppetlabs-inifile"
+github "nginx",      "1.4.2"
+github "nodejs",     "3.2.7"
+github "openssl",    "1.0.0"
+github "repository", "2.2.0"
+github "ruby",       "6.1.1"
+github "stdlib",     "4.1.0", :repo => "puppetlabs/puppetlabs-stdlib"
+github "sudo",       "1.0.0"
+github "xquartz",    "1.1.0"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
-github "xquartz",           "1.1.0"
 github "ctags",             "1.0.0"
 github "heroku",            "2.0.0"
 github "memcached",         "1.2.0"
