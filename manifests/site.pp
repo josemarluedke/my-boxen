@@ -94,7 +94,6 @@ node default {
   include vlc
   include textual
   include alfred
-  include clipmenu
   include appcleaner
   include pckeyboardhack
   include transmit
