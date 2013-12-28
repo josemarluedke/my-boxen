@@ -166,7 +166,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (6.7.6)
+    ruby (6.8.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-skype
@@ -274,7 +274,7 @@ DEPENDENCIES
   rdio (= 1.0.0)
   redis (= 2.1.0)
   repository (= 2.2.0)
-  ruby (= 6.7.6)
+  ruby (= 6.8.0)
   skype (= 1.0.7)
   stdlib (= 4.1.0)
   sublime_text_2 (= 1.1.2)
