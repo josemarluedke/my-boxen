@@ -74,6 +74,11 @@ GITHUBTARBALL
     heroku (2.1.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-hipchat
+  specs:
+    hipchat (1.1.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
     homebrew (1.5.1)
@@ -254,6 +259,7 @@ DEPENDENCIES
   gitx (= 1.2.0)
   googledrive (= 1.0.2)
   heroku (= 2.1.1)
+  hipchat (= 1.1.0)
   homebrew (= 1.5.1)
   hub (= 1.2.0)
   imagemagick (= 1.2.1)

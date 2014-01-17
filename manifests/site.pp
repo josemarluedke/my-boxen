@@ -86,6 +86,7 @@ node default {
   include wget
   include sublime_text_2
   include macvim
+  include hipchat
   include mou
   include github_for_mac
   include caffeine
