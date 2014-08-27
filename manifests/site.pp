@@ -104,7 +104,7 @@ node default {
   include chrome
   include onepassword
   include firefox
-  include rdio
+  include spotify
   include java
 
   # common, useful packages
