@@ -67,9 +67,6 @@ node default {
   include nodejs::v0_10
 
   # default ruby versions
-  ruby::version { '2.0.0': }
-  ruby::version { '2.1.0': }
-  ruby::version { '2.1.1': }
   ruby::version { '2.1.2': }
 
   # custom modules
@@ -78,7 +75,7 @@ node default {
   include memcached
   include redis
   include postgresapp
-  include phantomjs::1_9_0
+  include phantomjs
   include imagemagick
   include iterm2::dev
   include tmux
@@ -106,13 +103,19 @@ node default {
   include firefox
   include spotify
   include java
+  include toggl
+  include licecap
+  include wunderlist
+
+  phantomjs::global { '1.9.0': }
 
   # common, useful packages
   package {
     [
       'ack',
       'findutils',
-      'gnu-tar'
+      'gnu-tar',
+      'imagesnap'
     ]:
   }
 

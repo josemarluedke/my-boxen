@@ -37,14 +37,27 @@ MacVim.
 
 How do you do it?
 
+#### OS X 10.9 (Mavericks)
+
+If you are using [`b26abd0` of boxen-web](https://github.com/boxen/boxen-web/commit/b26abd0d681129eba0b5f46ed43110d873d8fdc2)
+or newer, it will be automatically installed as part of Boxen.
+Otherwise, follow instructions below.
+
+#### OS X < 10.9
+
 1. Install Xcode from the Mac App Store.
 1. Open Xcode.
 1. Open the Preferences window (`Cmd-,`).
 1. Go to the Downloads tab.
 1. Install the Command Line Tools.
 
-
 ### Instalation
+Create a **new** git repository somewhere on the internet.
+It can be private or public -- it really doesn't matter.
+If you're making a repository on GitHub, you _may not_ want to fork this repo
+to get started.
+The reason for that is that you can't really make private forks of public
+repositories easily.
 
 That's enough to get your boxen into a usable state on other machines, usually.
 
@@ -53,14 +66,42 @@ sudo mkdir -p /opt/boxen
 sudo chown ${USER}:staff /opt/boxen
 git clone https://github.com/josemarluedke/my-boxen.git /opt/boxen/repo
 cd /opt/boxen/repo
-script/boxen
+git remote rm origin
+git remote add origin <the location of my new git repository>
+git push -u origin master
+```
+
+Now that your boxen is bootstrapped, you can run the following to
+install the default configuration from this repo:
+
+```
+cd /opt/boxen/repo
+./script/boxen
+```
+
+### Distributing
+
+That's enough to get your boxen into a usable state on other machines,
+usually.
+From there, we recommend setting up
+[boxen-web](https://github.com/boxen/boxen-web)
+as an easy way to automate letting other folks install your boxen.
+
+If you _don't_ want to use boxen-web, folks can get using your boxen like so:
+
+```
+sudo mkdir -p /opt/boxen
+sudo chown ${USER}:staff /opt/boxen
+git clone <location of my new git repository> /opt/boxen/repo
+cd /opt/boxen/repo
+./script/boxen
 ```
 
 Keep in mind this requires you to encrypt your hard drive by default.
 If you do not want to do encrypt your hard drive, you can use the `--no-fde`.
 
 ```
-script/boxen --no-fde
+./script/boxen --no-fde
 ```
 
 It should run successfully, and should tell you to source a shell script
@@ -90,10 +131,11 @@ This template project provides the following by default:
 * Node.js 0.6
 * Node.js 0.8
 * Node.js 0.10
-* Ruby 1.8.7
-* Ruby 1.9.2
 * Ruby 1.9.3
 * Ruby 2.0.0
+* Ruby 2.1.0
+* Ruby 2.1.1
+* Ruby 2.1.2
 * ack
 * Findutils
 * GNU tar
@@ -130,11 +172,11 @@ boxen repo (ex. /path/to/your-boxen/Puppetfile):
     # Optional/custom modules. There are tons available at
     # https://github.com/boxen.
 
-    github "java",     "1.1.0"
+    github "java",     "1.6.0"
 
 In the above snippet of a customized Puppetfile, the bottom line
-includes the Java module from Github using the tag "1.1.0" from the github repository
-"boxen/puppet-java".  The function "github" is defined at the top of the Puppetfile
+includes the Java module from Github using the tag "1.6.0" from the github repository
+"[boxen/puppet-java/releases](https://github.com/boxen/puppet-java/releases)".  The function "github" is defined at the top of the Puppetfile
 and takes the name of the module, the version, and optional repo location:
 
     def github(name, version, options = nil)
@@ -146,8 +188,34 @@ and takes the name of the module, the version, and optional repo location:
 Now Puppet knows where to download the module from when you include it in your site.pp or mypersonal.pp file:
 
     # include the java module referenced in my Puppetfile with the line
-    # github "java",     "1.1.0"
+    # github "java",     "1.6.0"
     include java
+
+### Hiera
+
+Hiera is preferred mechanism to make changes to module defaults (e.g. default
+global ruby version, service ports, etc). This repository supplies a
+starting point for your Hiera configuration at `config/hiera.yml`, and an
+example data file at `hiera/common.yaml`. See those files for more details.
+
+The default `config/hiera.yml` is configured with a hierarchy that allows
+individuals to have their own hiera data file in
+`hiera/users/{github_login}.yaml` which augments and overrides
+site-wide values in `hiera/common.yaml`. This default is, as with most of the
+configuration in the example repo, a great starting point for many
+organisations, but is totally up to you. You might want to, for
+example, have a set of values that can't be overridden by adding a file to
+the top of the hierarchy, or to have values set on specific OS
+versions:
+
+```yaml
+# ...
+:hierarchy:
+  - "global-overrides.yaml"
+  - "users/%{::github_login}"
+  - "osx-%{::macosx_productversion_major}"
+  - common
+```
 
 ### Node definitions
 
@@ -190,7 +258,7 @@ everyone by default. An example of this might look like so:
 
    include projects::super-top-secret-project
  }
- ```
+```
 
  If you'd like to read more about how Puppet works, we recommend
  checking out [the official documentation](http://docs.puppetlabs.com/)
@@ -230,6 +298,9 @@ we'll fork it under the Boxen org and give you read+write access to our
 fork.
 You'll still be the maintainer, you'll still own the issues and PRs.
 It'll just be listed under the boxen org so folks can find it more easily.
+
+##upgrading boxen
+See [FAQ-Upgrading](https://github.com/boxen/our-boxen/blob/master/docs/faq.md#q-how-do-you-upgrade-your-boxen-from-the-public-our-boxen).
 
 ## Integrating with Github Enterprise
 
