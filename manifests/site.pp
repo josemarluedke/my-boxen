@@ -95,7 +95,7 @@ node default {
   include textual
   include alfred
   include appcleaner
-  include pckeyboardhack
+  include seil
   include transmit
   include skype
   include chrome
