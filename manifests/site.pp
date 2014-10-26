@@ -99,7 +99,6 @@ node default {
   include transmit
   include skype
   include chrome
-  include onepassword
   include firefox
   include spotify
   include java
