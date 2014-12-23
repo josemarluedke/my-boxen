@@ -114,7 +114,8 @@ node default {
       'ack',
       'findutils',
       'gnu-tar',
-      'imagesnap'
+      'imagesnap',
+      'libv8'
     ]:
   }
 
